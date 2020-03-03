@@ -1,0 +1,25 @@
+<%- include("../partials/top") %>
+
+<div class="container">
+    <h1 class="text-center mb-4">Create New Campground</h1>
+    <form class="mx-auto my-3 w-50" action="/campgrounds" method="post">
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" placeholder="Campground Name">
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" id="image" name="image" placeholder="Image URL">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="description" placeholder="Description" rows="10" cols="30"></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+
+    <a href="/campgrounds" class="text-center" style="display: block;">View Campgrounds</a>
+</div>
+
+
+<%- include("../partials/bottom") %>

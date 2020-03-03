@@ -1,0 +1,25 @@
+<%- include("../partials/top") %>
+
+<div class="container">
+    <h1 class="text-center mb-4">Edit <%= campground.name %></h1>
+    <form class="mx-auto my-3 w-50" action="/campgrounds/<%= campground.id %>?_method=PUT" method="POST">
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" name="editedCampground[name]" value="<%= campground.name %>">
+        </div>
+        <div class="form-group">
+
+            <input type="text" class="form-control" id="image" name="editedCampground[image]" value="<%= campground.image %>">
+        </div>
+        <div class="form-group">
+            <textarea class="form-control" name="editedCampground[description]" rows="10" cols="30"><%= campground.description %></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block">Submit</button>
+        </div>
+    </form>
+
+    <a href="/campgrounds" class="text-center" style="display: block;">View Campgrounds</a>
+</div>
+
+
+<%- include("../partials/bottom") %>
